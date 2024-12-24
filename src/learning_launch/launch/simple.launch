@@ -1,0 +1,6 @@
+<launch>
+    <arg name="max_batch_size" default="1" />
+    <node name="publisher" pkg="learning_launch" type="publisher" output="screen" />
+        <param name="max_batch_size" value="$(arg max_batch_size)"/>
+    <node name="subscriber" pkg="learning_launch" type="subscriber" output="screen" />
+</launch>
